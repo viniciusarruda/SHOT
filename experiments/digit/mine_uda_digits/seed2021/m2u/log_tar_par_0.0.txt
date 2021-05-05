@@ -1,0 +1,26 @@
+==========================================
+gpu_id:0
+s:0
+t:1
+max_epoch:30
+batch_size:64
+worker:4
+dset:m2u
+lr:0.01
+seed:2021
+cls_par:0.0
+ent_par:1.0
+gent:False
+ent:True
+bottleneck:256
+layer:wn
+classifier:bn
+smooth:0.1
+output:mine_uda_digits
+issave:True
+class_num:10
+output_dir:mine_uda_digits/seed2021/m2u
+out_file:<_io.TextIOWrapper name='mine_uda_digits/seed2021/m2u/log_tar_par_0.0.txt' mode='w' encoding='ANSI_X3.4-1968'>
+modelpath:mine_uda_digits/seed2021/m2u/source_C.pt
+savename:par_0.0
+

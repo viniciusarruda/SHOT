@@ -27,6 +27,36 @@ Code for our ICML-2020 paper [**Do We Really Need to Access the Source Data? Sou
 | Oracle (2021)  | 99.3 | 99.3 | 97.0 |  	 |
 | Oracle (Avg.)  | 99.2 | 99.2 | 97.0 | 98.8 |
 
+#### Table 2 [UDA results on Digits] (Vinicius Arruda replication + experiments)
+
+
+| Methods    | S->M | U->M | M->U | Avg. |
+| -------------- | ---- | ---- | ---- | ---- |
+| srconly (2019) | 74.26 | 85.87 | 77.04 |  	 |
+| srconly (2020) | 68.50 | 87.37 | 84.30 |   	 |
+| srconly (2021) | 72.49 | 89.09 | 77.96 |  	 |
+| srconly (Avg.) | 71.75 | 87.44 | 79.77 | 79.65 |
+| SHOT-ENT (2019) |  |  |  |  	 |
+| SHOT-ENT (2020) | 99.04 | 97.68 | 97.80 |  	 |
+| SHOT-ENT (2021) |  |  |  |  	 |
+| SHOT-ENT (Avg.) |  |  |  | |
+| SHOT-GENT (2019) |  |  |  |  	 |
+| SHOT-GENT (2020) | 21.30 | 29.38 | 23.66 |  	 |
+| SHOT-GENT (2021) |  |  |  |  	 |
+| SHOT-GENT (Avg.) |  |  |  | |
+| SHOT-IM (2019) | 99.12 | 97.57 | 97.80 |  	 |
+| SHOT-IM (2020) | 99.02 | 97.71 | 98.23 |  	 |
+| SHOT-IM (2021) | 98.77 | 98.83 | 97.85 |  	 |
+| SHOT-IM (Avg.) | 98.97 | 98.04 | 97.96 | 98.32 |
+| SHOT (2019)    | 98.95 | 97.63 | 97.80 |   	 |
+| SHOT (2020)    | 98.00 | 97.72 | 98.17 |  	 |
+| SHOT (2021)    | 98.93 | 98.95 | 97.90 |  	 |
+| SHOT (Avg.)    | 98.63 | 98.10 | 97.96 | 98.23 |
+| Oracle (2019)  |  |  |  |  	 |
+| Oracle (2020)  |  |  |  |  	 |
+| Oracle (2021)  |  |  |  |  	 |
+| Oracle (Avg.)  |  |  |  |  |
+
 #### Table 3 [UDA results on Office]
 
 | Methods        | A->D | A->W | D->A | D->W | W->A | W->D | Avg. |

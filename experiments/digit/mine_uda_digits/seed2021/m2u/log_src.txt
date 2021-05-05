@@ -1,0 +1,35 @@
+==========================================
+gpu_id:0
+s:0
+t:1
+max_epoch:30
+batch_size:64
+worker:4
+dset:m2u
+lr:0.01
+seed:2021
+cls_par:0.0
+ent_par:1.0
+gent:False
+ent:True
+bottleneck:256
+layer:wn
+classifier:bn
+smooth:0.1
+output:mine_uda_digits
+issave:True
+class_num:10
+output_dir:mine_uda_digits/seed2021/m2u
+out_file:<_io.TextIOWrapper name='mine_uda_digits/seed2021/m2u/log_src.txt' mode='w' encoding='ANSI_X3.4-1968'>
+
+Task: m2u, Iter:2814/28140; Accuracy = 98.73%/ 98.79%
+Task: m2u, Iter:5628/28140; Accuracy = 99.12%/ 98.95%
+Task: m2u, Iter:8442/28140; Accuracy = 99.26%/ 99.10%
+Task: m2u, Iter:11256/28140; Accuracy = 99.29%/ 99.13%
+Task: m2u, Iter:14070/28140; Accuracy = 99.37%/ 99.16%
+Task: m2u, Iter:16884/28140; Accuracy = 99.42%/ 99.14%
+Task: m2u, Iter:19698/28140; Accuracy = 99.48%/ 99.24%
+Task: m2u, Iter:22512/28140; Accuracy = 99.51%/ 99.30%
+Task: m2u, Iter:25326/28140; Accuracy = 99.53%/ 99.25%
+Task: m2u, Iter:28140/28140; Accuracy = 99.59%/ 99.28%
+Task: m2u, Accuracy = 77.53%

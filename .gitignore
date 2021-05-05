@@ -1,3 +1,5 @@
 **/__pycache__
 digit/ckps_digits
 digit/data
+experiments/digit/ckps_*
+experiments/digit/data
