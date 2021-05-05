@@ -1,0 +1,14 @@
+version: '2.4'
+
+services:
+  shot:
+    container_name: 'shot'
+    image: 'shot'
+    build: .
+    volumes:
+      - ../:/shot
+    user: "1002"
+    tty: true
+    stdin_open: true
+    privileged: true
+    runtime: nvidia
