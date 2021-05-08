@@ -36,18 +36,17 @@ Code for our ICML-2020 paper [**Do We Really Need to Access the Source Data? Sou
 | srconly (2020) | 68.50 | 87.37 | 84.30 |   	 |
 | srconly (2021) | 72.49 | 89.09 | 77.96 |  	 |
 | srconly (Avg.) | 71.75 | 87.44 | 79.77 | 79.65 |
-| SHOT-ENT (2019) |  |  |  |  	 |
 | SHOT-ENT (2020) | 99.04 | 97.68 | 97.80 |  	 |
-| SHOT-ENT (2021) |  |  |  |  	 |
-| SHOT-ENT (Avg.) |  |  |  | |
-| SHOT-GENT (2019) |  |  |  |  	 |
 | SHOT-GENT (2020) | 21.30 | 29.38 | 23.66 |  	 |
-| SHOT-GENT (2021) |  |  |  |  	 |
-| SHOT-GENT (Avg.) |  |  |  | |
+| SHOT-IM-NO-SRC-SMOOTH (2020) | |  | 98.12 |  	 |  (from srconly 71.67 m2u)
+| SHOT-IM-NO-H-FREEZE (2020) | |  | 97.80 |  	 |  (from srconly 77.37 m2u)
+| SHOT-IM-NO-SRC-SMOOTH-H-FREEZE (2020) | |  | 98.33 |  	 |  (from srconly 77.37 m2u)
 | SHOT-IM (2019) | 99.12 | 97.57 | 97.80 |  	 |
 | SHOT-IM (2020) | 99.02 | 97.71 | 98.23 |  	 |
 | SHOT-IM (2021) | 98.77 | 98.83 | 97.85 |  	 |
 | SHOT-IM (Avg.) | 98.97 | 98.04 | 97.96 | 98.32 |
+| SHOT-H-FREEZE (2020) | |  | 97.96 |  	 |  (from srconly 77.37 m2u)
+| SHOT-NO-SRC-SMOOTH-H-FREEZE (2020) | |  | 97.74 |  	 |  (from srconly 77.37 m2u)
 | SHOT (2019)    | 98.95 | 97.63 | 97.80 |   	 |
 | SHOT (2020)    | 98.00 | 97.72 | 98.17 |  	 |
 | SHOT (2021)    | 98.93 | 98.95 | 97.90 |  	 |
@@ -56,6 +55,10 @@ Code for our ICML-2020 paper [**Do We Really Need to Access the Source Data? Sou
 | Oracle (2020)  |  |  |  |  	 |
 | Oracle (2021)  |  |  |  |  	 |
 | Oracle (Avg.)  |  |  |  |  |
+
+mnist -> usps
+refazer.. conferir.. fazer desligando e ligando cada coisa! deixar codigo pronto e colocar os experimentos para rodar..
+olhar o todo la no tasks
 
 #### Table 3 [UDA results on Office]
 
