@@ -81,22 +81,21 @@ def cal_acc(loader, netF, netB, netC):
             data = iter_test.next()
             input_images = []
             inputs = data[0]
-            for j in range(inputs.size(0)):
-                # x = transforms.Normalize((-1, -1, -1), (2, 2, 2))(inputs[j])
-                x = transforms.Normalize((-1,), (2,))(inputs[j])
+            inputs_clone = inputs.clone()
+            for j in range(inputs_clone.size(0)):
+                x = transforms.Normalize((-1,), (2,))(inputs_clone[j])
                 input_images.append(transforms.ToPILImage()(x))
             labels = data[1]
-            inputs = inputs.cuda()
             outputs = netC(netB(netF(inputs)))
             #
             _, predict = torch.max(outputs.float().cpu(), 1)
             for j in range(inputs.size(0)):
                 folder = args.output_dir + '/inspect/label-{}'.format(labels[j])
                 if not osp.exists(folder):
-                    os.mkdir(folder)
+                    os.makedirs(folder)
                 subfolder = folder + '/pred-{}'.format(predict[j])
                 if not osp.exists(subfolder):
-                    os.mkdir(subfolder)
+                    os.makedirs(subfolder)
                 input_images[j].save(subfolder + '/{}.jpg'.format(k))
                 k += 1
             #
@@ -116,14 +115,14 @@ def test(args):
     dset_loaders = digit_load(args)
     ## set base network
     if args.dset == 'u':
-        netF = network.LeNetBase().cuda()
+        netF = network.LeNetBase()#.cuda()
     elif args.dset == 'm':
-        netF = network.LeNetBase().cuda()  
+        netF = network.LeNetBase()#.cuda()  
     elif args.dset == 's':
-        netF = network.DTNBase().cuda()
+        netF = network.DTNBase()#.cuda()
 
-    netB = network.feat_bootleneck(type=args.classifier, feature_dim=netF.in_features, bottleneck_dim=args.bottleneck).cuda()
-    netC = network.feat_classifier(type=args.layer, class_num = args.class_num, bottleneck_dim=args.bottleneck).cuda()
+    netB = network.feat_bootleneck(type=args.classifier, feature_dim=netF.in_features, bottleneck_dim=args.bottleneck)#.cuda()
+    netC = network.feat_classifier(type=args.layer, class_num = args.class_num, bottleneck_dim=args.bottleneck)#.cuda()
 
     args.modelpath = args.output_dir + '/F.pt'   
     netF.load_state_dict(torch.load(args.modelpath))
@@ -169,10 +168,10 @@ if __name__ == "__main__":
     args = parser.parse_args()
     args.class_num = 10
 
-    os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu_id
+    # os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu_id
     SEED = args.seed
     torch.manual_seed(SEED)
-    torch.cuda.manual_seed(SEED)
+    # torch.cuda.manual_seed(SEED)
     np.random.seed(SEED)
     random.seed(SEED)
     # torch.backends.cudnn.deterministic = True
